@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 12px;
 }
 
 .top-section {
@@ -18,7 +19,7 @@
 }
 
 #select {
-    width: 4vw;
+    width: 100px;
     height: 4vh;
     background-color: #FC9739;
     color: #FFFFFF;
@@ -39,7 +40,7 @@
 }
 
 #search-icon {
-    width: 4em;
+    width: 70px;
     height: 4vh;
     background-color: #FC9739;
     color: #FFFFFF;
@@ -51,9 +52,15 @@
     color: #FFFFFF;
 }
 
+.top-section-right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 40px;
+}
+
 #shopping {
     color: #FFFFFF;
-    margin-right: 40px;
     font-weight: bold;
 }
 
@@ -65,7 +72,7 @@
 
 .anavbar {
     display: inline-block;
-    text-align: center;    
+    text-align: center; 
     width: auto;
     height: 5vh;
     color: #FFFFFF;
@@ -110,20 +117,30 @@
     color: #FC9739;
 }
 
+.price {
+    display: flex;
+    flex-direction: row;
+}
+
 .price-input {
-    width: 5vw;
+    width: 90px;
     height: 4vh;
     box-sizing: border-box;
     border: 1px solid #FC9739;
+    margin-right: 3px;
     padding-left: 8px;
 }
 
 .go-button {
-    width: 4vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
     height: 4vh;
     background-color: #FC9739;
     border: none;
     color: #FFFFFF;
+    text-decoration: none;
 }
 
 .div-left {
@@ -133,7 +150,7 @@
 }
 
 .content-center {
-    width: 19vw;
+    width: 25vw;
     height: 60vh;
     display: flex;
     flex-direction: column;
@@ -156,10 +173,8 @@
 }
 
 .content-right {
-    width: 58vw;
+    width: 50vw;
     height: 60vh;
-    box-sizing: border-box;
-    border: 1px solid red;
 }
 
 .jumper {
@@ -189,8 +204,12 @@
     font-size: 2em;
 }
 
+.content-right-button-a {
+    text-decoration: none;
+}
+
 .content-right-button {
-    width: 10vw;
+    width: 120px;
     height: 5vh;
     background-color: #FC9739;
     color: #FFFFFF;
@@ -210,7 +229,7 @@
 
 .footer {
     width: 100vw;
-    height: 30vh;
+    height: 18vh;
     background-color: #242E3E;
     color: #FFFFFF;
     display: flex;
@@ -226,9 +245,88 @@
     color: #FC9739;
 }
 
+.footer-div-div {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
 .bottom-nav {
     color: #FFFFFF;
     text-decoration: none;
-    margin-top: 20px;
 }
 
+@media screen and (max-width:500px) {
+    .main {
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    .top-section {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    .hello {
+        display: none;
+    }
+
+    .top-section-right {
+        display: none;
+    }
+
+    .top-navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: auto;
+        height: auto;
+    }
+
+    .anavbar {
+        width: 500px;
+        text-align: left;
+    }
+
+    .content-container {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        margin-left: 30px;
+    }
+    .content-center {
+        display: flex;
+        justify-content: flex-start;
+    }
+    .footer {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        height: 80vh;
+        align-items: center;
+        margin: 0px;
+    }
+    .footer-div {
+        margin: 0px;
+        width: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .categories {
+        width: auto;
+        display: flex;
+        justify-self: flex-end;
+    }
+    .content-center {
+        width: auto;
+        display: flex;
+        align-items: center;
+    }
+    .anavbar:hover {
+        width: 453px;
+    }
+   
+}
